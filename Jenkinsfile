@@ -8,6 +8,7 @@ pipeline {
                      echo "Multiline shell steps works too"
                      ls -lah
                      pwd
+                     echo "Auto Trigger works too"
                  '''
              }
          }
