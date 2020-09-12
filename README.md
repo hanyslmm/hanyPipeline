@@ -18,7 +18,7 @@ As a part of the project, you will need to install Jenkins and a few plugins to 
 
 ## Challenges
 1. Install Tidy on linux server.
-2.
+2. Integrate with AWS S3
 
 ## Project Steps:
 
