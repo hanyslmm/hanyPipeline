@@ -8,20 +8,19 @@ pipeline {
                      echo "Multiline shell steps works too"
                      ls -lah
                      pwd
-                     echo "Auto Trigger works too"
                  '''
              }
          }
-         stage('Lint HTML') {
-              steps {
-                  sh 'tidy -q -e index.html'
+//         stage('Lint HTML') {
+  //            steps {
+//                  sh 'tidy -q -e index.html'
+    //          }
+  //       }
+    //     stage('Security Scan') {
+      //        steps {
+    //             aquaMicroscanner imageName: 'alpine:latest', notCompliesCmd: 'exit 1', onDisallowed: 'fail', outputFormat: 'html'
               }
-         }
-         stage('Security Scan') {
-              steps {
-                 aquaMicroscanner imageName: 'alpine:latest', notCompliesCmd: 'exit 1', onDisallowed: 'fail', outputFormat: 'html'
-              }
-         }
+      //   }
          stage('Upload to AWS') {
               steps {
                   withAWS(region:'us-west-2',credentials:'jenkinsUser') {
