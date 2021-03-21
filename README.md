@@ -11,6 +11,41 @@ You would require to have an AWS account to be able to build cloud infrastructur
 #### 2. Jenkins on Ubuntu VM
 As a part of the project, you will need to install Jenkins and a few plugins to assist your requirements, as mentioned in the "Jenkins Pipelines on AWS --> Project Details" page in the classroom.
 
+#### Install Jenkins on Ubuntu steps:
+
+1- Update existing packages
+
+sudo apt-get update
+2- Install Java *sudo apt install -y default-jdk
+
+3- Download Jenkins package.
+
+You can go to http://pkg.jenkins.io/debian/ to see the available commands
+First, add a key to your system wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
+4- Add the following entry in your /etc/apt/sources.list:
+
+sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+5- Update your local package index
+
+sudo apt-get update
+6- Install Jenkins
+
+sudo apt-get install -y jenkins
+7- Start the Jenkins server
+
+sudo systemctl start jenkins
+8- Enable the service to load during boot
+
+sudo systemctl enable jenkins
+sudo systemctl status jenkins
+https://www.jenkins.io/doc/pipeline/tour/getting-started/
+
+https://www.jenkins.io/doc/tutorials/create-a-pipeline-in-blue-ocean/
+
+https://www.jenkins.io/doc/book/blueocean/creating-pipelines/
+
+https://www.jenkins.io/doc/book/pipeline/#pipeline-example
+
 ## Prerequisite
 1. A little knowledge of basic commands in Unix terminal.
 2. Understanding of software testing frameworks - JMeter and JUnit
